@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+</head>
+<script src="./script.js"></script>
+<style>
+    #body {
+        background-color: #1c1c1c;
+        color: #ff6f61;
+    }
+    #amount {
+        padding: 10px;
+        border-radius: 10px;
+    }
+    #network{
+        padding: 10px;
+        border-radius: 10px;
+    }
+    #rechargeinput {
+        padding: 9px;
+        border-radius: 10px;
+        background-color: #e6e6fa;
+    }
+    #recharge {
+        padding: 9px;
+        border-radius: 10px;
+        background-color: #e6e6fa;
+    }
+    #recharge:hover {
+        background-color: #8A2BE2;
+    }
+    #codeInput {
+        padding: 10px;
+        border-radius: 10px;
+        background-color: #e6e6fa;
+    }
+    #savebutton {
+        padding: 10px;
+        border-radius: 10px;
+        background-color: #e6e6fa;
+    }
+    #savebutton:hover {
+        background-color: #8A2BE2;
+    }
+    #generate {
+        padding: 10px;
+        border-radius: 10px;
+        background-color: #e6e6fa;
+    }
+    #generate:hover {
+        background-color: #8A2BE2;
+    }
+</style>
+<body id="body">
+    <h1 style="color: #FF6347;" class="text-center">Recharge Card Generator</h1>
+    <div class="text-center">
+        <span>Network: <select name="" id="network">
+        <option value="">Select Network</option>
+        <option value="MTN">MTN</option>
+        <option value="AIRTEL">AIRTEL</option>
+        <option value="GLO">GLO</option>
+        <option value="9MOBILE">9MOBILE</option>
+    </select></span>
+    <span>Pin: <input id="rechargeinput" type="text"></span>
+    <button id="recharge" onclick="rechargeButton()">Recharge</button>
+    </div>
+    <br>
+    <div class="text-center">
+        <span>Amount: <select id="amount">
+            <option value="">Select Amount (Naira)</option>
+            <option value="50">50</option>
+            <option value="100">100</option>
+            <option value="200">200</option>
+            <option value="500">500</option>
+            <option value="1000">1000</option>
+            </select></span>
+    </div>
+    <br>
+    <div class="text-center">
+        <span>Code: <input id="codeInput" type="text"></span>
+        <button id="generate" onclick="codeGenerator()">Generate</button>
+        <button id="savebutton" onclick="savePin()" class="mb-4">Save Pin</button>
+    </div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th class="table-primary">S/N</th>
+                <th class="table-danger">Network</th>
+                <th class="table-success">Amount</th>
+                <th class="table-danger">Pin</th>
+                <th class="table-warning">Status</th>
+                <th class="table-info">Date Created</th>
+                <th class="table-light">Date Used</th>
+                <th class="table-danger">Action</th>
+            </tr>
+        </thead>
+        <tbody id="tablebody">
+            
+        </tbody>
+    </table>
+</body>
+</html>

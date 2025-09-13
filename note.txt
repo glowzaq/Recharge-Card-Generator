@@ -1,0 +1,4 @@
+i used for loop which means telling the computer to do the same thing at a specified amount of time which in my case is 12. so the i declared a num variable to be equal 0, i.e start from 0, the condition is to be less than 12 and the increment should be +1, hence the ++.
+
+the math.random generates a random decimal number between 0 and 1 and that number should be multiplied by 10
+math.floor helps me to round the number down. i could use math.round but that will round it up and likely give me a number that's greater than 9 and i dont want that. the += helps me to append the numbers
