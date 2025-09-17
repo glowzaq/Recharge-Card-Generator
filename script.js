@@ -4,6 +4,7 @@ let randomNumber;
 function codeGenerator() {
     randomNumber = Math.floor(Math.random() * 2983646788);
     document.getElementById('codeInput').value = randomNumber;
+    document.getElementById('savebutton').disabled = false;
 }
 
 function savePin() {
@@ -29,6 +30,8 @@ function savePin() {
     }
     cardArray.push(user);
     updateTable();
+    document.getElementById('savebutton').disabled = true;
+    document.getElementById('recharge').disabled = false;
 }
 
 function updateTable() {
@@ -61,6 +64,8 @@ function rechargeButton() {
         alert('Pin not found')
     }
     updateTable();
+    document.getElementById('recharge').disabled = true;
+    document.getElementById('rechargeinput').value = '';
 }
 function delButton(index) {
     cardArray.splice(index, 1);
